@@ -10,7 +10,7 @@ from telegram.ext import (
     filters
 )
 
-BOT_TOKEN = os.getenv ("BOT_TOKEN")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = int(os.getenv("OWNER_ID", "0"))
 DB_FILE = "files.json"
 
@@ -81,4 +81,5 @@ app.add_handler(MessageHandler(filters.ALL, handle_files))
 
 print("Bot is running...")
 app.run_polling()
+
 
